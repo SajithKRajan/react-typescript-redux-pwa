@@ -4,10 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserHistory } from 'history';
+import configureStore from './configureStore';
+
+const history = createBrowserHistory();
+
+const store = configureStore(history);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App store={store} history={history} />
   </React.StrictMode>,
   document.getElementById('root')
 );

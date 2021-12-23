@@ -1,21 +1,40 @@
 import './App.css';
 import { ThemeProvider, StyledEngineProvider, createTheme } from '@mui/material/styles';
-import Layout from './common/components/layout';
-import { CssBaseline } from '@mui/material';
+import { Box, CssBaseline } from '@mui/material';
+import { BrowserRouter } from 'react-router-dom';
+import MainRoutes from './routes';
+import { Provider } from 'react-redux';
+import { Store } from 'redux';
+import { History } from 'history';
+import { ApplicationState } from './store';
+
+interface MainProps {
+  store: Store<ApplicationState>;
+  history: History;
+}
+
+
 
 const theme = createTheme({
   palette: {
-    mode: 'dark'
+    mode: 'light'
   }
 });
 
-function App() {
+function App({ store, history }: MainProps) {
   return (
-    <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
-        <CssBaseline>
-          <Layout />
-        </CssBaseline></ThemeProvider></StyledEngineProvider>
+    <Provider store={store}>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          <BrowserRouter>
+            <Box sx={{ display: 'flex' }}>
+              <CssBaseline />
+              <MainRoutes></MainRoutes>
+            </Box>
+          </BrowserRouter>
+        </ThemeProvider>
+      </StyledEngineProvider>
+    </Provider>
   );
 }
 
