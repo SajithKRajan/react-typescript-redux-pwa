@@ -17,7 +17,7 @@ interface MainProps {
 
 const theme = createTheme({
   palette: {
-    mode: 'light'
+    mode: 'light',
   }
 });
 

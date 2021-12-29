@@ -1,0 +1,12 @@
+{
+  "appName": "Tsekmo",
+  "landingPageToolBar": {
+    "signUp": "Sign up",
+    "hostSignUp": "Become a host",
+    "login": "Login"
+  },
+  "landingPage": {
+    "mainHeading": "Find your nearest restroom in a few clicks",
+    "description": "Easily find the appropriate restroom that suit your likings and preference"
+  }
+}

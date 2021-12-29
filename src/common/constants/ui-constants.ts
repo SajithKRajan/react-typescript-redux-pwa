@@ -17,4 +17,10 @@
 
 export default class UIConstants {
   static readonly rootBgColor = 'rgb(255, 255, 255)';
+  static readonly appBarHeight = 80;
+  static readonly primaryBgColor = '#1C2577';
+  static readonly primaryColor = '#F2FDFF';
+  static readonly appBorderRadius = '8px';
+  static readonly appFont = 'Poppins'
+ 
 }

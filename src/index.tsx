@@ -6,6 +6,8 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserHistory } from 'history';
 import configureStore from './configureStore';
+import './assets/i18n/i18n';
+import "@fontsource/poppins";
 
 const history = createBrowserHistory();
 
